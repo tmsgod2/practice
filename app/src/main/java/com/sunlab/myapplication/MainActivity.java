@@ -13,6 +13,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String name;
+
     FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
     FragmentHome fragmentHome = new FragmentHome();
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        name = "SeonHangLee";
+
 
         fragmentTransaction.replace(R.id.frameLayout,fragmentHome).commitAllowingStateLoss();
 
@@ -52,5 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
     }
 }
