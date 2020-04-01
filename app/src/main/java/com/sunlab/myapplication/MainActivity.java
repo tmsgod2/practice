@@ -2,6 +2,7 @@ package com.sunlab.myapplication;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,15 +34,19 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.homeItem:
                         fragmentTransaction.replace(R.id.frameLayout,fragmentHome).commitAllowingStateLoss();
+                        Toast.makeText(getApplicationContext(),"홈화면",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.chatItem:
                         fragmentTransaction.replace(R.id.frameLayout,fragmentChatting).commitAllowingStateLoss();
+                        Toast.makeText(getApplicationContext(),"채팅화면",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.rankingItem:
                         fragmentTransaction.replace(R.id.frameLayout,fragmentRanking).commitAllowingStateLoss();
+                        Toast.makeText(getApplicationContext(),"랭킹화면",Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.profileItem:
                         fragmentTransaction.replace(R.id.frameLayout,fragmentProfile).commitAllowingStateLoss();
+                        Toast.makeText(getApplicationContext(),"프로필화면",Toast.LENGTH_SHORT).show();
                         break;
                 }
                 return true;
